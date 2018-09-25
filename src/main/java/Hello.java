@@ -1,27 +1,34 @@
 import java.util.Scanner;
 
 public class Hello {
-    public static String hello(){
-        return "hello";
-    }
 
     public static void main(String[] args){
-        System.out.println("Введите первый ip адрес:");
-        Scanner input = new Scanner(System.in);
-        String ip1 = input.nextLine();
-
-        System.out.println("Введите второй ip адрес:");
-        String ip2 = input.nextLine();
 
 
-        System.out.println(ip1);
-        System.out.println(ip2);
+        Scanner input = null;
+        String ip1 = null;
+        while (IpAdress.validIP(ip1) == false) {
+            System.out.println("Введите первый ip адрес:");
+            input = new Scanner(System.in);
+            ip1 = input.nextLine();
+        }
+
+        String ip2 = null;
+        while (IpAdress.validIP(ip2) == false) {
+            System.out.println("Введите второй ip адрес:");
+            input = new Scanner(System.in);
+            ip2 = input.nextLine();
+        }
+
+        Long int_ip1 = Math.min(IpAdress.Ip2Int(ip1),IpAdress.Ip2Int(ip2));
+        Long int_ip2 = Math.max(IpAdress.Ip2Int(ip1),IpAdress.Ip2Int(ip2));
+
+
+        System.out.println("Выводим диапазон адресов:");
+        for (Long i = int_ip1; i<=int_ip2; i++){
+            System.out.println(IpAdress.ipToStr(i));
+        }
+
     }
-        /*BufferedReader reader = new BufferedReader( new InputStreamReader (System.in));
-        String numa = reader.readLine();
-        int num1 = Integer.parseInt(numa);
-        String numb = reader.readLine();
-        int num2 = Integer.parseInt(numb);
-        */
 
 }
