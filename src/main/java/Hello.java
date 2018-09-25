@@ -4,7 +4,6 @@ public class Hello {
 
     public static void main(String[] args){
 
-
         Scanner input = null;
         String ip1 = null;
         while (IpAdress.validIP(ip1) == false) {
@@ -25,7 +24,8 @@ public class Hello {
 
 
         System.out.println("Выводим диапазон адресов:");
-        for (Long i = int_ip1; i<=int_ip2; i++){
+        if ((int_ip1-int_ip2)<=1) System.out.println("диапазон пуст");
+        for (Long i = int_ip1+1; i<int_ip2; i++){
             System.out.println(IpAdress.ipToStr(i));
         }
 

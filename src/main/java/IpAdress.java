@@ -8,6 +8,7 @@ public abstract class IpAdress
     private static final Integer m1 = 256*256;
     private static final Integer m2 = 256;
 
+    //перевод строки с ip адресом в число
     static public long Ip2Int( String ia )
     {
         String iab[] = ia.split("\\.");
@@ -18,6 +19,7 @@ public abstract class IpAdress
         return (m0*i0)+(m1*i1)+(m2*i2)+i3;
     }
 
+    //перевод числа в ip адрес
     static public String ipToStr( long ip )
     {
         long a = ip;
