@@ -24,7 +24,7 @@ public class Hello {
 
 
         System.out.println("Выводим диапазон адресов:");
-        if ((int_ip1-int_ip2)<=1) System.out.println("диапазон пуст");
+        if ((int_ip2-int_ip1)<=1) System.out.println("диапазон пуст");
         for (Long i = int_ip1+1; i<int_ip2; i++){
             System.out.println(IpAdress.ipToStr(i));
         }
