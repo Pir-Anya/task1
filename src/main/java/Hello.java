@@ -19,8 +19,10 @@ public class Hello {
             ip2 = input.nextLine();
         }
 
-        Long int_ip1 = Math.min(IpAdress.Ip2Int(ip1),IpAdress.Ip2Int(ip2));
-        Long int_ip2 = Math.max(IpAdress.Ip2Int(ip1),IpAdress.Ip2Int(ip2));
+        Long ipa1 = IpAdress.Ip2Int(ip1);
+        Long ipa2 = IpAdress.Ip2Int(ip2);
+        Long int_ip1 = Math.min(ipa1,ipa2);
+        Long int_ip2 = Math.max(ipa1,ipa2);
 
 
         System.out.println("Выводим диапазон адресов:");
